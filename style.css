@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#map {
+  height: 100vh;
+  z-index: 20;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+#open,
+#close {
+  cursor: pointer;
+}
+#big-title {
+  z-index: 100;
+  color: azure;
+  margin-left: 50px;
+  font-family: "indie flower";
+  text-align: justify;
+  border-radius: 5px;
+  background: rgba(255, 1, 1, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrapper {
+  display: flex;
+  align-items: start;
+  margin-top: 75px;
+  position: fixed;
+  left: 10px;
+  z-index: 50;
+  height: 100vh;
+}
+
+aside {
+  background: rgba(53, 51, 51, 0.7);
+  color: white;
+  height: 640px;
+  width: 240px;
+  border-radius: 10px;
+  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  margin-left: -180px;
+  overflow: auto;
+}
+
+#inputs {
+  border-radius: 5px;
+  position: relative;
+}
+
+/* Kaydırma çubuğunun genel stilini ayarlar */
+aside::-webkit-scrollbar {
+  width: 5px; /* Kaydırma çubuğunun genişliği */
+}
+
+/* Kaydırma çubuğunun parçasını (çubuk) stilize eder */
+aside::-webkit-scrollbar-thumb {
+  background: #888; /* Kaydırma çubuğu rengi */
+  border-radius: 10px;
+}
+
+/* Kaydırma çubuğunun parçası üzerine gelindiğinde */
+aside::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Kaydırma çubuğu üzerine gelindiğindeki renk */
+}
+
+aside:hover {
+  background: rgb(53, 51, 51);
+}
+
+aside h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "indie flower";
+  font-size: 33px;
+  letter-spacing: 9px;
+  background: rgb(53, 51, 51);
+  padding: 3px;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+}
+
+form {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form select {
+  padding: 6px;
+  border-radius: 6px;
+  font-size: 15px;
+  border: none;
+}
+
+.buttons {
+  flex-direction: row;
+}
+
+.buttons button {
+  flex: 1;
+  background: black;
+  color: white;
+  font-family: "poppins";
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+}
+
+.buttons button:first-child {
+  background: rgb(141, 139, 139);
+}
+
+.buttons button:hover {
+  filter: brightness(70%);
+  border: 2px solid rgb(0, 105, 128);
+}
+
+/* listeleme alanı */
+ul {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  margin-top: 20px;
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+ul::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 4px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(70, 70, 70);
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  width: 140px;
+  border-radius: 15px;
+}
+
+li p:first-child {
+  font-family: "indie flower";
+  font-size: x-large;
+}
+
+li p span:first-child {
+  font-weight: bold;
+}
+
+li .icons {
+  display: flex;
+  gap: 3px;
+  position: relative;
+  padding-left: 5px;
+}
+
+li i {
+  cursor: pointer;
+  font-size: 19px;
+  transition: all 0.3s;
+}
+
+li .icons i:first-child:hover {
+  filter: drop-shadow(0 0 10px rgb(0, 179, 255));
+}
+
+li .icons i:last-child:hover {
+  filter: drop-shadow(0 0 10px red);
+}
+.info {
+  width: max-content;
+  padding-left: 5px;
+  overflow: hidden;
+  font-weight: 100;
+}
